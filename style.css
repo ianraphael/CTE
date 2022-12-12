@@ -41,6 +41,7 @@
 .main-content {
 	display: flex;
 }
+
 .cte-page {
 	width: 75%;
 	padding: 0 15px;
@@ -104,12 +105,13 @@ hr {
     margin-bottom: 15px;
 }
 .colleges .college-card {
-	border-bottom: 1px solid #eee;
+		border-bottom: 1px solid #eee;
     border-top: 1px solid #eee;
     border-right: 1px solid #eee;
     border-left: 5px solid #eee;
     margin-bottom: 10px;
     padding: 6px;
+		width: 100%;
 }
 .colleges .college-card a {
 	text-decoration: none;
@@ -164,3 +166,22 @@ footer .row {
 	text-align: center;
 }
 
+@media screen and (max-width: 570px) {
+	.main-content {
+		flex-direction: column;
+	}
+	footer .row {
+		grid-template-columns: none;
+		grid-template-rows: 1fr 1fr 1fr;
+		grid-gap: 20px;
+	}
+	.cte-page {
+		width: 100%;
+	}
+	.colleges {
+		width: 100%;
+	}
+	.colleges .college-card {
+		width: 100%;
+	}
+}
